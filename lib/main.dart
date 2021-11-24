@@ -1,8 +1,9 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:productivity_app/app/sign_in.dart';
+import 'package:productivity_app/app/landing_page.dart';
+import 'package:productivity_app/services/auth.dart';
 
-void main() async{
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
 
@@ -20,8 +21,9 @@ class HomePage extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.indigo,
       ),
-      home: SigninPage(),
+      home: LandingPage(
+        auth: Auth(),
+      ),
     );
-
   }
 }
