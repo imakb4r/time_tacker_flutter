@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:productivity_app/services/auth.dart';
+import 'package:productivity_app/sign_in/sign_in_page.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({Key? key, required this.auth}) : super(key: key);
@@ -30,9 +31,20 @@ class SignupPage extends StatelessWidget {
     }
   }
 
+  void _signInWithEmail(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute<void>(
+      fullscreenDialog: true,
+      builder: (context) => EmailSignInPage(),
+    ));
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -79,7 +91,7 @@ class SignupPage extends StatelessWidget {
                       color: Colors.blue,
                     ),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () => _signInWithEmail(context),
                       child: Text(
                         "Sign Up with Email",
                         style: TextStyle(

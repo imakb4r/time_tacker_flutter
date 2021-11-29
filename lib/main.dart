@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:productivity_app/app/landing_page.dart';
 import 'package:productivity_app/services/auth.dart';
 
@@ -19,7 +20,8 @@ class HomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Productivity App",
       theme: ThemeData(
-        primarySwatch: Colors.indigo,
+        primarySwatch: Colors.grey,
+        fontFamily: GoogleFonts.lato().fontFamily,
       ),
       home: LandingPage(
         auth: Auth(),
