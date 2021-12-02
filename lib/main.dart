@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Productivity App",
       theme: ThemeData(
-        primarySwatch: Colors.grey,
+        primarySwatch: Colors.indigo,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
       home: LandingPage(
